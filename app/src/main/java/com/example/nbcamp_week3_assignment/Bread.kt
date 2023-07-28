@@ -17,7 +17,8 @@ class Bread() : Menu() {
                     println("choice : " + choice)
                     println("bread : " + breadArray[choice - 1][0].toString())
                     break;
-                } else {
+                }
+                else {
                     println("1부터 $length 까지 입력 가능합니다.")
                     continue;
                 }
@@ -25,8 +26,5 @@ class Bread() : Menu() {
                 println("숫자만 입력 가능합니다.")
             }
         }
-// var choice = readln()!!.toInt()
-// orderList.add(breadArray[choice - 1][0].toString())
-
     }
 }

@@ -13,8 +13,11 @@ class RollsAndPound : Menu() {
                 var choice = readln()!!.toInt()
                 if(0 < choice && choice <= length) {
                     orderList.add(rollsAndPoundArray[choice - 1][0].toString())
+                    println("choice : " + choice)
+                    println("bread : " + rollsAndPoundArray[choice - 1][0].toString())
                     break;
-                } else {
+                }
+                else {
                     println("1부터 $length 까지 입력 가능합니다.")
                     continue;
                 }
@@ -22,9 +25,5 @@ class RollsAndPound : Menu() {
                 println("숫자만 입력 가능합니다.")
             }
         }
-
-// var choice = readln()!!.toInt()
-// orderList.add(rollsAndPoundArray[choice - 1][0].toString())
     }
 }
-//

@@ -11,10 +11,10 @@ fun main() {
     val snacks = Snacks()
     val cake = Cake()
     val rollsAndPound = RollsAndPound()
-    var menu = Menu()
-    var n3: Int = 0
     var order = Order()
     val account = Balance().rand(20, 30)
+    var n3: Int = 0
+
     println("성심당에 오신것을 환영합니다.")
     println("현재 잔액은 ${account}원 입니다.")
 
@@ -76,7 +76,10 @@ fun main() {
                         rollsAndPound.add(orderList)
                         break
                     }
-                    else -> println("해당 번호의 품목이 존재하지 않습니다. 다시 입력해 주세요.")
+                    else -> {
+                        println("해당 번호의 품목이 존재하지 않습니다. 다시 입력해 주세요.")
+                        continue
+                    }
                 }
             } catch (e: java.lang.NumberFormatException) {
                 println("잘못 입력하셨습니다. 숫자를 입력해 주세요")
@@ -90,9 +93,7 @@ fun main() {
                 when (n3) {
                     1 -> {
                         break
-                        continue
                     }
-
                     2 -> {
                         order.displayOrder(orderList, account) // 주문 내역과 결제 기능 호출
                         break
@@ -106,11 +107,9 @@ fun main() {
             } catch (e: java.lang.NumberFormatException) {
                 println("잘못 입력하셨습니다. 숫자를 입력해 주세요")
             }
-
         }
         when (n3) {
             2 -> break
         }
     }
 }
-//
